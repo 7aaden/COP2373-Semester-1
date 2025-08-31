@@ -8,7 +8,6 @@
 TOTAL_TICKETS = 20
 MAX_TICKETS_PER_BUYER = 4
 
-
 # Define the sell_tickets function to handle sales.
 def sell_tickets():
 
@@ -82,7 +81,6 @@ def main():
     print("All tickets have been sold!")
     print(f"Total number of buyers: {total_buyers}")
     print(f"Total tickets sold: {tickets_sold}")
-
 
 # Run the main function
 main()
