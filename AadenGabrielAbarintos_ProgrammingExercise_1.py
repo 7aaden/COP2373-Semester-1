@@ -80,8 +80,8 @@ def main():
     # Display the data results
     print()
     print("All tickets have been sold!")
-    print(f"Total tickets sold: {tickets_sold}")
     print(f"Total number of buyers: {total_buyers}")
+    print(f"Total tickets sold: {tickets_sold}")
 
 
 # Run the main function
