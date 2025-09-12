@@ -16,7 +16,7 @@ def sell_tickets():
     tickets_remaining = TOTAL_TICKETS
 
     # Initialize the accumulator variable to count the number of buyers.
-    buyers = 0
+    customers = 0
 
     # Initialize a while loop to repeatedly ask a customer for
     # how many tickets they want to purchase.
@@ -59,14 +59,14 @@ def sell_tickets():
         # count how many tickets are remaining.
         else:
             tickets_remaining -= tickets_bought
-            buyers += 1
+            customers += 1
             print("Thank you for your purchase. You have bought: " 
                 f"{tickets_bought} ticket(s)."
             )
     
     # Return how much people bought tickets and
     # how many tickets are remaining.
-    return buyers, TOTAL_TICKETS - tickets_remaining
+    return customers, TOTAL_TICKETS - tickets_remaining
 
 
 # Define the main function
