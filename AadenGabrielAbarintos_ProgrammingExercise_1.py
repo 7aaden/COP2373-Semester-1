@@ -5,7 +5,7 @@
 # The program ends once all tickets are sold and displays the data.
 
 # Initialize constants (global variables).
-TOTAL_TICKETS = 20
+TOTAL_TICKETS = 10
 MAX_TICKETS_PER_BUYER = 4
 
 # Define the sell_tickets function to handle sales.
