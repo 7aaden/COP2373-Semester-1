@@ -28,7 +28,7 @@ def sell_tickets():
         # Ask the user how many tickets they would like to purchase.
         try:
             tickets_bought = int(input(
-            "How many tickets would you like to buy? "
+            "What amount of tickets would you like to purchase? "
             "(4 maximum per person): "
             ))
         
