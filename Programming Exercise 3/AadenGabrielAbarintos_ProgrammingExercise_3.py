@@ -4,14 +4,14 @@
 # of the expense. The program then analyzes the list and displays
 # the total expense, highest expense, and the lowest expense.
 
-# Import the functools module
+# Import the functools module.
 import functools
 
 
 # Define the main function.
 def main():
 
-    # Create an empty dictionary of expenses
+    # Create an empty dictionary of expenses.
     expenses = []
 
     # Ask the user for their list of their monthly expenses.
@@ -48,39 +48,39 @@ def main():
         print("No expenses entered.")
         return
     
-    # Calculate the total expense
+    # Calculate the total expense.
     total_expenses = functools.reduce(
         lambda acc, x: acc + x["amount"], expenses, 0
         )
 
-    # Calculate the highest expense
+    # Calculate the highest expense.
     highest_expense = functools.reduce(
         lambda acc, x: x if x["amount"] > acc["amount"] else acc, expenses
         )
 
-    # Calculate the lowest expense
+    # Calculate the lowest expense.
     lowest_expense = functools.reduce(
         lambda acc, x: x if x["amount"] < acc["amount"] else acc, expenses
         )
 
-    # Display the results
+    # Display the results.
     print ("Expense Report: ")
     print()
 
-    # Print the total expenses
+    # Print the total expenses.
     print(f"Total Expenses: ${total_expenses:.2f}")
     
-    # Print the highest expense
+    # Print the highest expense.
     print("Highest Expense: "
         f"{highest_expense['type']}, ${highest_expense['amount']:.2f}"
     )
 
-    # Print the lowest expense
+    # Print the lowest expense.
     print("Lowest Expense: "
         f"{lowest_expense['type']}, ${lowest_expense['amount']:.2f}"
     )
 
-# Run the main function
+# Run the main function.
 main()
 
 
