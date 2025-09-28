@@ -23,7 +23,7 @@ def main():
 
         # Ask the user for one of their expenses.
         expense_type = input("Enter the type of expense here "
-        "(type done when finished listing your expenses): "
+        "(type 'done' when finished listing your expenses): "
         )
 
         # If the user inputs done, end the while loop.
