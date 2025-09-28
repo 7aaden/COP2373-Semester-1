@@ -7,6 +7,7 @@
 # Import the functools module
 import functools
 
+
 # Define the main function.
 def main():
 
@@ -36,7 +37,7 @@ def main():
             ))
 
             # Add the data to the dictionary
-            expenses.append(expense_type, expense_amount)
+            expenses.append({"type": expense_type, "amount": expense_amount})
 
         # Raise a value error if they do not input a number.
         except ValueError:
@@ -47,19 +48,37 @@ def main():
         print("No expenses entered.")
         return
     
-# Calculate the total expense
+    # Calculate the total expense
+    total_expenses = functools.reduce(
+        lambda acc, x: acc + x["amount"], expenses, 0
+        )
 
-# Calculate the highest expense
+    # Calculate the highest expense
+    highest_expense = functools.reduce(
+        lambda acc, x: x if x["amount"] > acc["amount"] else acc, expenses
+        )
 
-# Calculate the lowest expense
+    # Calculate the lowest expense
+    lowest_expense = functools.reduce(
+        lambda acc, x: x if x["amount"] < acc["amount"] else acc, expenses
+        )
 
     # Display the results
     print ("Expense Report: ")
     print()
-    print("Total Expenses: ")
-    print("Highest Expense: ")
-    print("Lowest Expense: ")
 
+    # Print the total expenses
+    print(f"Total Expenses: ${total_expenses:.2f}")
+    
+    # Print the highest expense
+    print("Highest Expense: "
+        f"{highest_expense['type']}, ${highest_expense['amount']:.2f}"
+    )
+
+    # Print the lowest expense
+    print("Lowest Expense: "
+        f"{lowest_expense['type']}, ${lowest_expense['amount']:.2f}"
+    )
 
 # Run the main function
 main()
