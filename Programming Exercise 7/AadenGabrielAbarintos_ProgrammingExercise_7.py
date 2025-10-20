@@ -1,4 +1,4 @@
-# AadenGabrielAbarintos_ProgrammingExercise_8.py
+# AadenGabrielAbarintos_ProgrammingExercise_7.py
 # This program allows the user to enter a paragraph,
 # including sentences that begin with numbers.
 # The program then displays each individual sentence and
