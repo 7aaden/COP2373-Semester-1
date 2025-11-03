@@ -94,7 +94,10 @@ class BankAcct:
 
         # Update the interest rate.
         if self.last_interest_calc > 0:
-            result += f"\nLast Calculated Interest: ${self.last_interest_calc:.2f}"
+            result += (
+                f"\nLast Calculated Interest: $"
+                f"{self.last_interest_calc:.2f}"
+                )
 
         # Return the account data.
         return result
